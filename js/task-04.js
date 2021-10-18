@@ -8,16 +8,12 @@ const decrementBtnRef = document.querySelector(
 const incrementBtnRef = document.querySelector(
   'button[data-action="increment"]');
 
-const increase = () => {
-    counterValue++;
-    return (valueRef.textContent = counterValue);
-};
+incrementBtnRef.addEventListener("click", () => {
+  counterValue++;
+    valueRef.textContent = counterValue;
+});
 
-const decrease = () => {
-    counterValue--;
-    return (valueRef.textContent = counterValue);
-};
-
-incrementBtnRef.addEventListener("click", increase);
-
-decrementBtnRef.addEventListener("click", decrease); 
+decrementBtnRef.addEventListener("click", () => {
+  counterValue--;
+    valueRef.textContent = counterValue;
+});
